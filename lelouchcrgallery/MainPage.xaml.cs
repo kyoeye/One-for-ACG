@@ -1,4 +1,5 @@
-﻿using lelouchcrgallery.proxy;
+﻿using lelouchcrgallery.page;
+using lelouchcrgallery.proxy;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,7 +28,7 @@ namespace lelouchcrgallery
         public MainPage()
         {
             this.InitializeComponent();
-            onetext.Text = "请按下刷新按钮获取图片";
+           // onetext.Text = "请按下刷新按钮获取图片";
             //和网络结♂合失败⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄
         }
 
@@ -48,6 +49,11 @@ namespace lelouchcrgallery
         private void hanbao_Click(object sender, RoutedEventArgs e)
         {
             mynemu.IsPaneOpen = !mynemu.IsPaneOpen;
+        }
+
+        private void Setting_Click(object sender, RoutedEventArgs e)
+        {
+            myframe.Navigate(typeof(seting));
         }
     }
 }

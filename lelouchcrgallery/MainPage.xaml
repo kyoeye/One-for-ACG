@@ -10,7 +10,7 @@
 
     <Page.BottomAppBar >
         <CommandBar VerticalAlignment="Bottom">
-            <AppBarButton Icon="Setting" Label="设置" />
+            <AppBarButton Icon="Setting" Label="设置" Click="Setting_Click" />
             <AppBarButton Icon="Refresh" Label="更换" Click="fresh_Click" />
             <AppBarButton Icon="Download"  Label="保存" />
 
@@ -25,10 +25,6 @@
             <RowDefinition Height=" *" />
         </Grid.RowDefinitions>
           
-
-        <Frame/>
-
-
         <TextBlock Name="onetext" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"  Height="20" Width="0"/>
     
 
@@ -52,7 +48,7 @@
             <SplitView.Pane >
                  <ListBox Background="#FF1F78B6" >
                     <ListBoxItem >
-                       <TextBlock Text="单图" Foreground="#FFEDE4EB"/>
+                       <TextBlock Text="单图" Foreground="#FFEDE4EB" FontSize="20"/>
                     </ListBoxItem>
                  </ListBox>
               
@@ -62,7 +58,8 @@
 <!-- 标志大小 -->     
         <TextBlock Name="twotext" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right" FontSize="20"   SelectionHighlightColor="White" Foreground="White"  />
 
-
+        <Frame Grid.Row="1" Name="myframe"/>
+        
     </Grid>
-
+    
 </Page>
