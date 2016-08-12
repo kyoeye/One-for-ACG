@@ -43,7 +43,7 @@
             <TextBlock Text=" &#xE970;" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Foreground="#FFFFECEC"/>
         </AppBarButton>  
         
-<!-- image -->
+<!--image -->
         <ScrollViewer ZoomMode="Enabled"   HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" VerticalScrollMode="Auto"  Grid.Row="1" >
             <Image Stretch="Uniform"   Name="thephoto" HorizontalAlignment="Center" VerticalAlignment="Center"   />
         </ScrollViewer>  
