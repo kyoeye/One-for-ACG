@@ -13,15 +13,16 @@
             <AppBarButton Icon="Setting" Label="设置" />
             <AppBarButton Icon="Refresh" Label="更换" Click="fresh_Click" />
             <AppBarButton Icon="Download"  Label="保存" />
-        </CommandBar>
 
+            <CommandBar.SecondaryCommands  >
+                <AppBarButton Name="Blackms1"  Label="原图"   />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
     </Page.BottomAppBar>
     <Grid Background="{ThemeResource AppBarItemForegroundThemeBrush}">
         <Grid.RowDefinitions >
             <RowDefinition Height="auto" />
             <RowDefinition Height=" *" />
-            
-
         </Grid.RowDefinitions>
           
 
@@ -30,30 +31,34 @@
 
         <TextBlock Name="onetext" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"  Height="20" Width="0"/>
     
-<!-- 汉堡菜单 -->
-        <Grid  Grid.Row="0"  Height=" 50"  Background="#FF2291DE" >
-            <TextBlock Text="全年龄" Margin="10,0,0,0" Foreground="#FFFFECEC" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="迷你简橄榄" FontSize="20" />
 
-        </Grid>
- <!--    
-        <SplitView OpenPaneLength= "500" DisplayMode="CompactInline" Grid.Row="1" Background="Black" PaneBackground="#FF46A3E4" >
-            
-        </SplitView>
-        -->   
-        <!-- 按钮
+        <Border  Grid.Row="0"  Height=" 50"  Background="#FF2291DE" >
+            <TextBlock Text="全年龄" Margin="60,0,0,0" Foreground="#FFFFECEC" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="迷你简橄榄" FontSize="20" />
+
+        </Border>
+
+        
+        <!-- 按钮 -->
         <AppBarButton Click="hanbao_Click" HorizontalAlignment="Left" Width="55" Height=" 50" >
             <TextBlock Text=" &#xE970;" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Foreground="#FFFFECEC"/>
         </AppBarButton>  
-        -->
+        
 <!-- image -->
         <ScrollViewer ZoomMode="Enabled"   HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" VerticalScrollMode="Auto"  Grid.Row="1" >
-           
-                <Image Stretch="Uniform"   Name="thephoto" HorizontalAlignment="Center" VerticalAlignment="Center"   />
-
-       
+            <Image Stretch="Uniform"   Name="thephoto" HorizontalAlignment="Center" VerticalAlignment="Center"   />
         </ScrollViewer>  
-        
-        
+  <!-- 汉堡菜单 -->      
+         <SplitView  Name="mynemu" Grid.Row ="1"  OpenPaneLength=" 250" DisplayMode="Overlay" PaneBackground="#FF59A2D4">
+            <SplitView.Pane >
+                 <ListBox Background="#FF1F78B6" >
+                    <ListBoxItem >
+                       <TextBlock Text="单图" Foreground="#FFEDE4EB"/>
+                    </ListBoxItem>
+                 </ListBox>
+              
+            </SplitView.Pane>
+        </SplitView>
+       
 <!-- 标志大小 -->     
         <TextBlock Name="twotext" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right" FontSize="20"   SelectionHighlightColor="White" Foreground="White"  />
 

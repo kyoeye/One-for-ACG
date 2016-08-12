@@ -47,7 +47,7 @@ namespace lelouchcrgallery
 
         private void hanbao_Click(object sender, RoutedEventArgs e)
         {
-             
+            mynemu.IsPaneOpen = !mynemu.IsPaneOpen;
         }
     }
 }
