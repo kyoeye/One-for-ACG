@@ -27,7 +27,7 @@
 
         <TextBlock Name="onetext" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"  Height="20" Width="0"/>
         <Image  Name="thephoto"  />
-        <TextBlock Name="twotext" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="20"  Height="27" Width="0" />
+        <TextBlock Name="twotext" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="20"  Height="27" Width="0"  />
 <!-- 汉堡菜单 -->
         <Grid Height="50" VerticalAlignment="Top" Background="#FF2291DE" >
             <AppBarButton  HorizontalAlignment="Left" Width="55" >
