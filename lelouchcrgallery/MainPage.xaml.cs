@@ -35,6 +35,7 @@ namespace lelouchcrgallery
 
         private async void fresh_Click(object sender, RoutedEventArgs e)
         {
+         
             RootObject myimage = await pixivproxy.Getimage();
         
             twotext.Text = "高度"+ myimage.p_ori_hight + "宽度"+ myimage.p_ori_width;
@@ -42,6 +43,11 @@ namespace lelouchcrgallery
             BitmapImage bitmapImage = new BitmapImage(new Uri(myimage.p_ori));
             thephoto.Source = bitmapImage;
 
+        }
+
+        private void hanbao_Click(object sender, RoutedEventArgs e)
+        {
+             
         }
     }
 }

@@ -17,23 +17,45 @@
 
     </Page.BottomAppBar>
     <Grid Background="{ThemeResource AppBarItemForegroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="0*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="auto" />
+            <RowDefinition Height=" *" />
+            
+
+        </Grid.RowDefinitions>
+          
 
         <Frame/>
 
 
         <TextBlock Name="onetext" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"  Height="20" Width="0"/>
-        <Image  Name="thephoto"  />
-        <TextBlock Name="twotext" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="20"  Height="27" Width="0"  />
+    
 <!-- 汉堡菜单 -->
-        <Grid Height="50" VerticalAlignment="Top" Background="#FF2291DE" >
-            <AppBarButton  HorizontalAlignment="Left" Width="55" >
-                <TextBlock Text=" &#xE970;" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Foreground="#FFFFECEC"/>
-            </AppBarButton>
+        <Grid  Grid.Row="0"  Height=" 50"  Background="#FF2291DE" >
+            <TextBlock Text="全年龄" Margin="10,0,0,0" Foreground="#FFFFECEC" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="迷你简橄榄" FontSize="20" />
+
         </Grid>
+ <!--    
+        <SplitView OpenPaneLength= "500" DisplayMode="CompactInline" Grid.Row="1" Background="Black" PaneBackground="#FF46A3E4" >
+            
+        </SplitView>
+        -->   
+        <!-- 按钮
+        <AppBarButton Click="hanbao_Click" HorizontalAlignment="Left" Width="55" Height=" 50" >
+            <TextBlock Text=" &#xE970;" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Foreground="#FFFFECEC"/>
+        </AppBarButton>  
+        -->
+<!-- image -->
+        <ScrollViewer ZoomMode="Enabled"   HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" VerticalScrollMode="Auto"  Grid.Row="1" >
+           
+                <Image Stretch="Uniform"   Name="thephoto" HorizontalAlignment="Center" VerticalAlignment="Center"   />
+
+       
+        </ScrollViewer>  
+        
+        
+<!-- 标志大小 -->     
+        <TextBlock Name="twotext" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right" FontSize="20"   SelectionHighlightColor="White" Foreground="White"  />
 
 
     </Grid>

@@ -102,11 +102,15 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="model\model.cs" />
     <Compile Include="page\allold.xaml.cs">
       <DependentUpon>allold.xaml</DependentUpon>
     </Compile>
     <Compile Include="page\r18.xaml.cs">
       <DependentUpon>r18.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page\seting.xaml.cs">
+      <DependentUpon>seting.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="proxy\proxy.cs" />
@@ -141,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="page\r18.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page\seting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
