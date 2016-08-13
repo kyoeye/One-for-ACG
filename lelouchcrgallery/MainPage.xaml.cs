@@ -32,28 +32,55 @@ namespace lelouchcrgallery
     /// </summary>
     public sealed partial class MainPage : Page
     {
-      //  private object information;
+        //  private object information;
 
         public MainPage()
         {
             this.InitializeComponent();
             // onetext.Text = "请按下刷新按钮获取图片";
             //和网络结♂合失败⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄
-           
+            if (thephoto != null)
+            {
+                ring.IsActive = false;
+                ring.Visibility = Visibility.Collapsed;
+                onetext.Text = "请按下刷新按钮获取图片";
+            }
         }
+        private void Listboxmenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
-     
+            if (onepicture.IsSelected)
+            {
+                //myframe.Navigate(typeof(tangqiang));不存在
+                mynemu.IsPaneOpen = !mynemu.IsPaneOpen;
+            }
+
+            else if (huandeng.IsSelected)
+            {
+                myframe.Navigate(typeof(allold));
+                mynemu.IsPaneOpen = !mynemu.IsPaneOpen;
+
+            }
+        }
 
         private async void fresh_Click(object sender, RoutedEventArgs e)
         {
-         
-            RootObject myimage = await pixivproxy.Getimage();
-        
-            twotext.Text = "高度"+ myimage.p_ori_hight + "宽度"+ myimage.p_ori_width;
-            // BitmapImage貌似是用来接收uri来转成图片的，死国一得死
-            BitmapImage bitmapImage = new BitmapImage(new Uri(myimage.p_ori));
-            thephoto.Source = bitmapImage;
-
+             if (thephoto != null)
+            {
+                RootObject myimage = await pixivproxy.Getimage();
+                ring.IsActive = false;
+                ring.Visibility = Visibility.Collapsed;
+                twotext.Text = "高度" + myimage.p_ori_hight + "宽度" + myimage.p_ori_width;
+                // BitmapImage貌似是用来接收uri来转成图片的，死国一得死
+                BitmapImage bitmapImage = new BitmapImage(new Uri(myimage.p_ori));
+                thephoto.Source = bitmapImage;
+            }
+             else
+            {
+                ring.IsEnabled = true; 
+                ring.Visibility = Visibility.Visible;
+            }  
+           
         }
 
         private void hanbao_Click(object sender, RoutedEventArgs e)
@@ -68,7 +95,7 @@ namespace lelouchcrgallery
 
         private async void ShowMessageDialog()
         {
-            var msgDialog = new Windows.UI.Popups.MessageDialog("失败") { Title = "您没有找到可以签订契约的图片" };
+            var msgDialog = new Windows.UI.Popups.MessageDialog("失败") { Title = "交易中断，来晚了吗？ #贝多芬.jpg" };
             msgDialog.Commands.Add(new Windows.UI.Popups.UICommand("确定"));
             msgDialog.Commands.Add(new Windows.UI.Popups.UICommand("取消"));
             await msgDialog.ShowAsync();

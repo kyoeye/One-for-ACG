@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="lelouchcrgallery.page.onep"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:lelouchcrgallery.page"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image Stretch="Uniform"   Name="thephoto" HorizontalAlignment="Center" VerticalAlignment="Center"   />
+        <CommandBar Grid.Row="2" VerticalAlignment="Bottom">
+            <AppBarButton Icon="Refresh" Label="更换" Click="fresh_Click" />
+            <AppBarButton Name="baocun" Icon="Download"  Label="保存" Click="Download_Click" />
+
+            <CommandBar.SecondaryCommands  >
+                <AppBarButton Name="Blackms1"  Label="原图"   />
+                <AppBarButton  Name="homeimg"  Label="设置"   />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+
+    </Grid>
+</Page>

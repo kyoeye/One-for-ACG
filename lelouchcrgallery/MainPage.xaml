@@ -8,25 +8,13 @@
     Background ="#FF2291DE" 
     mc:Ignorable="d">
 
-    <Page.BottomAppBar >
-        <CommandBar VerticalAlignment="Bottom">
-            <AppBarButton Icon="Setting" Label="设置" Click="Setting_Click" />
-            <AppBarButton Icon="Refresh" Label="更换" Click="fresh_Click" />
-            <AppBarButton Name="baocun" Icon="Download"  Label="保存" Click="Download_Click" />
-
-            <CommandBar.SecondaryCommands  >
-                <AppBarButton Name="Blackms1"  Label="原图"   />
-                <AppBarButton  Name="homeimg"  Label="原图"   />
-            </CommandBar.SecondaryCommands>
-        </CommandBar>
-    </Page.BottomAppBar>
     <Grid Background="{ThemeResource AppBarItemForegroundThemeBrush}">
         <Grid.RowDefinitions >
             <RowDefinition Height="auto" />
             <RowDefinition Height=" *" />
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
           
-        <TextBlock Name="onetext" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"  Height="20" Width="0"/>
     
 
         <Border  Grid.Row="0"  Height=" 50"  Background="#FF2291DE" >
@@ -40,18 +28,25 @@
             <TextBlock Text=" &#xE970;" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe MDL2 Assets" Foreground="#FFFFECEC"/>
         </AppBarButton>  
         
-<!--image -->
+<!--image 
         <ScrollViewer ZoomMode="Enabled"   HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" VerticalScrollMode="Auto"  Grid.Row="1" >
             <Image Stretch="Uniform"   Name="thephoto" HorizontalAlignment="Center" VerticalAlignment="Center"   />
-        </ScrollViewer>  
+        </ScrollViewer>  -->
   <!-- 汉堡菜单 -->      
          <SplitView  Name="mynemu" Grid.Row ="1"  OpenPaneLength=" 250" DisplayMode="Overlay" PaneBackground="#FF59A2D4">
             <SplitView.Pane >
-                 <ListBox Background="#FF1F78B6" >
-                    <ListBoxItem >
+                <ListBox Name="Listboxmenu" SelectionChanged="Listboxmenu_SelectionChanged"  Background="#FF1F78B6" >
+                    <ListBoxItem Name="onepicture" >
                        <TextBlock Text="单图" Foreground="#FFEDE4EB" FontSize="20"/>
                     </ListBoxItem>
-                 </ListBox>
+                    <ListBoxItem Name="huandeng" >
+                        <TextBlock  Text="幻灯式" Foreground="#FFEDE4EB" FontSize="20"/>
+                    </ListBoxItem>
+                    <ListBoxItem >
+                        <TextBlock  Text="抱枕" Foreground="#FFEDE4EB" FontSize="20"/>
+                    </ListBoxItem>
+
+                </ListBox>
               
             </SplitView.Pane>
         </SplitView>
@@ -59,8 +54,23 @@
 <!-- 标志大小 -->     
         <TextBlock Name="twotext" VerticalAlignment="Center" Margin="0,0,10,0" HorizontalAlignment="Right" FontSize="20"   SelectionHighlightColor="White" Foreground="White"  />
 
+       
+      
+        <CommandBar Grid.Row="2" VerticalAlignment="Bottom">
+            <AppBarButton Icon="Setting" Label="设置" Click="Setting_Click" />
+            <AppBarButton Icon="Refresh" Label="更换" Click="fresh_Click" />
+            <AppBarButton Name="baocun" Icon="Download"  Label="保存" Click="Download_Click" />
+
+            <CommandBar.SecondaryCommands  >
+                <AppBarButton Name="Blackms1"  Label="原图"   />
+                <AppBarButton  Name="homeimg"  Label="原图"   />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+        <TextBlock Grid.Row="1" Name="onetext" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"  Height="20" Width="0"/>
+        <ProgressRing Grid.Row="1" IsActive="True"  Name="ring" Width=" 80" Height=" 80"/>
         <Frame Grid.Row="1" Name="myframe"/>
-        
+ 
+
     </Grid>
     
 </Page>

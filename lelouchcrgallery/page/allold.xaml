@@ -8,6 +8,16 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <FlipView Name="huandeng" >
+            <FlipViewItem >
+                <Image Name="myimage2" />
+            </FlipViewItem>
+        </FlipView>
+         <AppBarButton Click="flash2_Click" Width=" 50" Height=" 50" Background="#FFB8B8B8" FontWeight="Bold" Foreground="White" VerticalAlignment="Bottom" Margin="20,0,0,20" >
+            <AppBarButton.Icon>
+                <FontIcon Glyph="&#xE149;" FontWeight="Black"/>
+            </AppBarButton.Icon>
+        </AppBarButton>
+   
     </Grid>
 </Page>
