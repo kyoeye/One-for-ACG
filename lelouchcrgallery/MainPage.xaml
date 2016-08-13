@@ -12,10 +12,11 @@
         <CommandBar VerticalAlignment="Bottom">
             <AppBarButton Icon="Setting" Label="设置" Click="Setting_Click" />
             <AppBarButton Icon="Refresh" Label="更换" Click="fresh_Click" />
-            <AppBarButton Icon="Download"  Label="保存" />
+            <AppBarButton Name="baocun" Icon="Download"  Label="保存" Click="Download_Click" />
 
             <CommandBar.SecondaryCommands  >
                 <AppBarButton Name="Blackms1"  Label="原图"   />
+                <AppBarButton  Name="homeimg"  Label="原图"   />
             </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.BottomAppBar>
